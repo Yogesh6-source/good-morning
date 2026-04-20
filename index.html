@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Morning My Queen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-glow" aria-hidden="true"></div>
+  <div class="halo halo-left" aria-hidden="true"></div>
+  <div class="halo halo-right" aria-hidden="true"></div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
+  <main class="scene" id="mainScene">
+    <section class="royal-window">
+      <div class="window-arch" aria-hidden="true"></div>
+
+      <div class="top-actions">
+        <button class="music-button" id="musicButton" type="button" aria-pressed="false">Play music &#9834;</button>
+        <button class="replay-button hidden" id="replayButton" type="button">Replay the morning</button>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Royal Morning Tea Experience</p>
+        <h1 class="typing-line" id="typingLine" aria-live="polite"></h1>
+        <p class="lead-text">
+          This morning begins like a royal ritual: a golden tray, a warm cup of tea, and a love note prepared just for you.
+        </p>
+      </div>
+
+      <!-- The experience is paced like a small ritual so each reveal feels earned. -->
+      <div class="ritual-progress" id="ritualProgress" aria-label="Tea ritual progress">
+        <div class="progress-step is-active" id="stepBrew">
+          <span class="step-number">01</span>
+          <span class="step-label">Brew the tea</span>
+        </div>
+        <div class="progress-step" id="stepWish">
+          <span class="step-number">02</span>
+          <span class="step-label">Reveal the wish</span>
+        </div>
+        <div class="progress-step" id="stepCrown">
+          <span class="step-number">03</span>
+          <span class="step-label">Crown the queen</span>
+        </div>
+      </div>
+
+      <div class="experience-grid">
+        <section class="tea-chamber">
+          <div class="stage-haze" aria-hidden="true"></div>
+          <div class="stage-light" aria-hidden="true"></div>
+          <div class="steam-message" id="steamMessage">Your morning tea is served, my love &#9749;</div>
+
+          <div class="steam-columns" aria-hidden="true">
+            <span class="steam steam-one"></span>
+            <span class="steam steam-two"></span>
+            <span class="steam steam-three"></span>
+            <span class="steam steam-four"></span>
+          </div>
+
+          <!-- The tea stage doubles as a visual centerpiece and an interactive trigger. -->
+          <div class="tea-display" id="teaDisplay" role="button" tabindex="0" aria-label="Reveal your hidden morning wish">
+            <div class="scene-video-frame">
+              <video class="scene-poster" id="sceneVideo" autoplay muted loop playsinline preload="auto" poster="assets/royal-scene-source.png">
+                <source src="assets/royal-tea-scene.mp4" type="video/mp4">
+              </video>
+              <div class="scene-veil" aria-hidden="true"></div>
+              <div class="scene-pour-glow" aria-hidden="true"></div>
+              <div class="scene-caption">
+                <span class="scene-caption-script">Your morning tea is served, my love &#9749;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tea-actions">
+            <button class="action-button primary-button" id="pourButton" type="button">Pour the first sip</button>
+            <button class="action-button secondary-button" id="wishButton" type="button">Reveal the hidden wish</button>
+          </div>
+
+          <p class="hidden-message" id="hiddenMessage">May your day be as beautiful as your smile &#10084;&#65039;</p>
+        </section>
+
+        <aside class="message-chamber">
+          <div class="message-card">
+            <p class="card-label">Today's royal blessings</p>
+            <div class="blessing-list">
+              <article class="blessing-item">
+                <span class="blessing-icon">Dawn</span>
+                <p>Soft light follows you wherever you go.</p>
+              </article>
+              <article class="blessing-item">
+                <span class="blessing-icon">Bloom</span>
+                <p>Your grace turns ordinary moments into beautiful ones.</p>
+              </article>
+              <article class="blessing-item">
+                <span class="blessing-icon">Glow</span>
+                <p>Today deserves your smile, your courage, and your sparkle.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="letter-card" id="letterCard">
+            <div class="letter-seal" aria-hidden="true"></div>
+            <p class="card-label">A private note</p>
+            <p class="letter-preview">A sealed message waits for the queen of this heart.</p>
+            <button class="action-button queen-button" id="queenButton" type="button">A message for my queen &#128081;</button>
+            <div class="love-letter" id="loveLetter" aria-live="polite">
+              <p class="deep-message" id="deepMessage">You deserve the world&hellip; but for now, you have me &#10084;&#65039;</p>
+              <p class="deep-subtext">And if the world ever feels too loud, remember there is always one heart that speaks your name softly.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- The finale becomes a dedicated full-screen crown scene for the emotional ending. -->
+  <section class="final-scene" id="finalScene" aria-hidden="true">
+    <div class="final-haze" aria-hidden="true"></div>
+    <div class="final-card">
+      <p class="final-kicker">The morning ends with one truth</p>
+      <div class="crown-stage" aria-hidden="true">
+        <div class="crown-glow"></div>
+        <div class="crown-image-wrap">
+          <div class="crown-shadow"></div>
+          <img class="crown-image" src="assets/royal-scene-source.png" alt="Golden crown">
+        </div>
+      </div>
+      <p class="final-text">And you will always be my queen &#128081;</p>
+      <button class="action-button final-button" id="finalReplayButton" type="button">Relive the royal morning</button>
+    </div>
+  </section>
+
+  <noscript>
+    <div class="no-script">This royal surprise needs JavaScript enabled to play the full morning ritual.</div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
